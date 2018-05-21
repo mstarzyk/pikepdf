@@ -20,7 +20,7 @@ build_script:
 - ps: |
     if ($env:PYTHON) {
       python setup.py sdist
-      pip install --verbose dist\pikepdf*.tar.gz
+      python -m pip install --verbose dist\pikepdf*.tar.gz
     }
 test_script:
 - ps: python -m pytest
